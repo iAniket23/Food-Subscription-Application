@@ -1,5 +1,8 @@
 // import packages
 import 'package:flutter/material.dart';
+import 'package:frontend/responsive/mobile_screen_layout.dart';
+import 'package:frontend/responsive/web_screen_layout.dart';
+import 'responsive/responsive_layout_screen.dart';
 import 'utils/colors.dart';
 
 // run the app
@@ -23,7 +26,10 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: mobileBackgroundColor,
       ),
-      home: const Scaffold(body: Text('New App')),
+      home: const ResponsiveLayout(
+        webScreenLayout: WebScreenLayout(),
+        mobileScreenLayout: MobileScreenLayout(),
+      ),
     );
   }
 }
