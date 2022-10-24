@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 
-class MobileScreenLayout extends StatelessWidget {
-  const MobileScreenLayout({super.key});
+class WebScreenLayout extends StatelessWidget {
+  const WebScreenLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Mobile Screen Layout'),
-      ),
+    return Scaffold(
+      body: Container(
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/bg2.png'),
+          )
+        ),
+      )
     );
   }
 }

@@ -1,7 +1,7 @@
 // import packages
 import 'package:flutter/material.dart';
-import 'package:frontend/responsive/mobile_screen_layout.dart';
 import 'package:frontend/responsive/web_screen_layout.dart';
+import 'package:frontend/responsive/mobile_screen_layout.dart';
 import 'responsive/responsive_layout_screen.dart';
 import 'utils/colors.dart';
 
@@ -23,8 +23,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Food Subscription',
-      theme: ThemeData.dark().copyWith(
-        scaffoldBackgroundColor: mobileBackgroundColor,
+      theme: ThemeData.light().copyWith(
+        scaffoldBackgroundColor: buttonColor,
       ),
       home: const ResponsiveLayout(
         webScreenLayout: WebScreenLayout(),
