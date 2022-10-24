@@ -5,14 +5,10 @@ class WebScreenLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage('assets/bg2.png'),
-          )
-        ),
-      )
+    return const Scaffold(
+      body: Center(
+        child: Text('Web Screen Layout'),
+      ),
     );
   }
 }

@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:frontend/responsive/web_screen_layout.dart';
 import 'package:frontend/responsive/mobile_screen_layout.dart';
+import 'package:frontend/screens/login_screen.dart';
 import 'responsive/responsive_layout_screen.dart';
 import 'utils/colors.dart';
 
@@ -26,10 +27,11 @@ class _MyAppState extends State<MyApp> {
       theme: ThemeData.light().copyWith(
         scaffoldBackgroundColor: buttonColor,
       ),
-      home: const ResponsiveLayout(
-        webScreenLayout: WebScreenLayout(),
-        mobileScreenLayout: MobileScreenLayout(),
-      ),
+      home: LoginScreen(),
+      // home: const ResponsiveLayout(
+      //   webScreenLayout: WebScreenLayout(),
+      //   mobileScreenLayout: MobileScreenLayout(),
+      // ),
     );
   }
 }
