@@ -24,8 +24,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Food Subscription',
-      theme: ThemeData.light().copyWith(
-        scaffoldBackgroundColor: buttonColor,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: mobileBackgroundColor,
       ),
       home: LoginScreen(),
       // home: const ResponsiveLayout(
