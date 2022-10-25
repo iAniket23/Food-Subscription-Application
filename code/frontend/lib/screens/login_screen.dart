@@ -29,10 +29,9 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     var loginColumn = Column(
-      crossAxisAlignment: CrossAxisAlignment.center,
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         // Create a text field for the email
+        const SizedBox(height: 20),
         SizedBox(
           width: 400,
           child: TextFieldInput(
@@ -52,7 +51,6 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
         ),
         const SizedBox(height: 20),
-        // Create a button to login
         ElevatedButton(
           onPressed: () {},
           child: const Text('Login'),
@@ -61,60 +59,26 @@ class _LoginScreenState extends State<LoginScreen> {
       ],
     );
 
+    var imageBackground = SizedBox(
+      width: 800,
+      child: Image.asset('assets/bgImage.png'),
+    );
+
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          width: double.infinity,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+      body: Center(
+        child: SingleChildScrollView(
+        child:SafeArea(
+            child:Column(
+            children:
+             [
+              imageBackground,
               loginColumn,
-              Image.asset(
-                  'assets/bg.png',
-                ),
             ],
           ),
         ),
-      ),
+     ),
+    ) 
+      
     );
   }
 }
-
-
-// return Scaffold(
-//         // Create a body for the scaffold
-//         body: SafeArea(
-//             child: Container(
-//             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-//             width: double.infinity,
-//             child: Column(
-//               mainAxisAlignment: MainAxisAlignment.center,
-//               crossAxisAlignment: CrossAxisAlignment.center,
-//               children: [
-//                 Flexible(
-//                   flex: 2,
-//                   child: Container(),
-//                 ),
-//                 Image.asset(
-//                   'assets/bg.png',
-//                   height: 200,
-//                 ),
-//                 const SizedBox(height: 20),
-
-//                 SizedBox(
-//                   width: 200,
-//                   child:
-//                   TextFieldInput(
-//                   hintText: 'Enter your email',
-//                   textInputType: TextInputType.emailAddress,
-//                   textEditingController: _emailController,
-//                   ),
-//                 ),
-                               
-//               ],
-//             ),
-//           )
-//         )
-//       );
